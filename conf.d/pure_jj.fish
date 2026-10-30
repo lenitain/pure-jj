@@ -1,0 +1,67 @@
+# Defaults for pure-jj. They never overwrite values already set by the user.
+
+if not functions --query _pure_set_default
+    return
+end
+
+_pure_set_default pure_enable_jj true
+
+_pure_set_default pure_jj_show_bookmarks true
+_pure_set_default pure_jj_show_commit_id false
+_pure_set_default pure_jj_search_depth 20
+_pure_set_default pure_jj_show_bookmark_distance true
+_pure_set_default pure_jj_show_bookmark_sync true
+_pure_set_default pure_jj_show_bookmark_conflict true
+
+_pure_set_default pure_jj_show_empty true
+_pure_set_default pure_jj_show_dirty true
+_pure_set_default pure_jj_show_conflict true
+_pure_set_default pure_jj_show_divergent true
+_pure_set_default pure_jj_show_immutable false
+
+_pure_set_default pure_jj_show_trunk_distance false
+_pure_set_default pure_jj_show_statistics false
+_pure_set_default pure_jj_show_description false
+_pure_set_default pure_jj_description_max_length 40
+_pure_set_default pure_jj_show_no_description false
+_pure_set_default pure_jj_trunk_label trunk
+
+# Symbols. The dirty marker intentionally matches pure's git default.
+_pure_set_default pure_symbol_jj_dirty '*'
+_pure_set_default pure_symbol_jj_empty '(empty)'
+_pure_set_default pure_symbol_jj_conflict '×'
+_pure_set_default pure_symbol_jj_divergent '≠'
+_pure_set_default pure_symbol_jj_no_upstream '?'
+_pure_set_default pure_symbol_jj_bookmark_conflict '!'
+_pure_set_default pure_symbol_jj_immutable '🔒'
+_pure_set_default pure_symbol_jj_no_description '∅'
+_pure_set_default pure_symbol_jj_ahead '⇡'
+_pure_set_default pure_symbol_jj_behind '⇣'
+_pure_set_default pure_symbol_jj_ancestor '~'
+_pure_set_default pure_symbol_jj_descendant '+'
+_pure_set_default pure_symbol_jj_trunk_ahead '↥'
+_pure_set_default pure_symbol_jj_trunk_behind '↧'
+_pure_set_default pure_symbol_jj_stats_added '+'
+_pure_set_default pure_symbol_jj_stats_removed '-'
+_pure_set_default pure_symbol_jj_stats_modified '~'
+
+# Colors reuse pure's git palette by default.
+_pure_set_default pure_color_jj_change_id pure_color_mute
+_pure_set_default pure_color_jj_bookmark pure_color_mute
+_pure_set_default pure_color_jj_commit_id pure_color_mute
+_pure_set_default pure_color_jj_dirty pure_color_mute
+_pure_set_default pure_color_jj_empty pure_color_info
+_pure_set_default pure_color_jj_conflict pure_color_danger
+_pure_set_default pure_color_jj_divergent pure_color_danger
+_pure_set_default pure_color_jj_no_upstream pure_color_warning
+_pure_set_default pure_color_jj_bookmark_conflict pure_color_danger
+_pure_set_default pure_color_jj_immutable pure_color_warning
+_pure_set_default pure_color_jj_ahead pure_color_info
+_pure_set_default pure_color_jj_behind pure_color_info
+_pure_set_default pure_color_jj_trunk_ahead pure_color_info
+_pure_set_default pure_color_jj_trunk_behind pure_color_info
+_pure_set_default pure_color_jj_description pure_color_mute
+_pure_set_default pure_color_jj_no_description pure_color_warning
+_pure_set_default pure_color_jj_stats_added pure_color_success
+_pure_set_default pure_color_jj_stats_removed pure_color_danger
+_pure_set_default pure_color_jj_stats_modified pure_color_warning
