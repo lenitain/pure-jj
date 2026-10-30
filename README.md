@@ -153,7 +153,8 @@ Typical cost: one jj process (~15-20 ms) when no bookmark is displayed, two (~30
 - **Working-copy state is from the last snapshot.** `--ignore-working-copy` deliberately does not scan the filesystem. After editing files, `(empty)`, `*`, conflict flags, and file statistics can lag until the next jj command snapshots the working copy. This is the price for a prompt that never mutates the repository.
 - **No stash marker.** jj has no stash; use `jj undo`, `jj op restore`, or abandoned/parked changes instead.
 - **Depth is bounded.** `pure_jj_search_depth` defaults to 20 and is capped at 100. A truncated distance is shown as `N+`.
-- **Only local bookmarks are references.** Remote-only bookmarks are visible only through the `trunk()` fallback.
+- **Only local bookmarks are references.** Remote-only bookmarks and tags are visible only through the `trunk()` fallback.
+- **Workspaces.** In a multi-workspace repository the prompt describes the current workspace's `@`; the workspace name is not displayed.
 - **Multiple tracked remotes** are reduced to the largest ahead and behind counts; the counts may come from different remotes.
 - **Merges.** A nearest bookmark can be reachable through multiple paths; the distance is the size of the union of those paths. Normal linear stacks are exact.
 - **No snapshot toggle.** If you want a live working-copy mirror, run `jj status` (or use a filesystem watcher) separately.
