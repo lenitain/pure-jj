@@ -102,6 +102,8 @@ This is how the author's dotfiles wire it, so the plugin source stays outside th
 
 All options are read at prompt time; set them as universal or global fish variables.
 
+`pure_enable_git=false` disables the whole VCS segment, jj included. Use `pure_enable_jj=false` to disable only the jj part and fall back to git.
+
 | Variable | Default | Description |
 | --- | --- | --- |
 | `pure_enable_jj` | `true` | Set to `false` to fall back to pure's git segment in jj repositories |
