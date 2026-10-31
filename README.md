@@ -96,7 +96,27 @@ set --global --prepend fish_function_path ~/.projects/pure-jj/functions
 source ~/.projects/pure-jj/conf.d/pure_jj.fish
 ```
 
-This is how the author's dotfiles wire it, so the plugin source stays outside the dotfiles repository. Do not load another `_pure_prompt_git` override at the same time.
+Do not load another `_pure_prompt_git` override at the same time.
+
+### mise
+
+If your dotfiles are managed by mise, declare the checkout instead of cloning it by hand:
+
+```toml
+[bootstrap.repos]
+"~/.projects/pure-jj" = { url = "git@github.com:lenitain/pure-jj.git", ref = "main" }
+```
+
+Then register the plugin from one fish loader:
+
+```fish
+set --global --prepend fish_function_path ~/.projects/pure-jj/functions
+for init in ~/.projects/pure-jj/conf.d/*.fish
+    source $init
+end
+```
+
+The author's dotfiles does this in `conf.d/personal_plugins.fish`, so the plugin source stays outside the dotfiles repository and mise keeps the checkout in sync.
 
 ## Configuration
 
